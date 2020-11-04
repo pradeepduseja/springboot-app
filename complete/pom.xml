@@ -59,22 +59,23 @@
 				 <configuration>
 				    <schemaVersion>V2</schemaVersion>
 				    <subscriptionId>111111-11111-11111-1111111</subscriptionId>
-				    <resourceGroup>spring-boot-xxxxxxxxxx-rg</resourceGroup>
-				    <appName>spring-boot-xxxxxxxxxx</appName>
+				    <resourceGroup>CEP</resourceGroup>
+				    <appName>MySpringApp</appName>
 				    <pricingTier>B2</pricingTier>
-				    <region>westus</region>
+				    <region>centralus</region>
 				    <runtime>
-				      <os>Linux</os>      
-				      <webContainer>Java SE</webContainer>
-				      <javaVersion>Java 11</javaVersion>
-				    </runtime>
+         <os>linux</os>
+         <javaVersion>jre8</javaVersion>
+         <webContainer>jre8</webContainer>
+       </runtime>
 				    <deployment>
 				      <resources>
 					<resource>
 					  <directory>${project.basedir}/target</directory>
-					  <includes>
-				           <include>*.jar</include>
-				         </includes>
+					  <targetPath>/</targetPath>
+                                          <includes>
+                                             <include>web.config</include>
+                                         </includes>
 				        </resource>
 			               </resources>
 			            </deployment>
